@@ -5,6 +5,13 @@
   --muted: #6B7280;
   --card-bg: #fff;
 }
+:root {
+  --orange: #F97316;
+  --beige: #F5E6D3;
+  --black: #111827;
+  --muted: #6B7280;
+  --card-bg: #fff;
+}
 
 /*
 
