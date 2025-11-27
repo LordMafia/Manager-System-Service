@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Financeiro - Marca de Roupas</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><h1>SINERGIA</h1></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="vendas.html">Vendas</a></li>
+          <li><a href="financeiro.html">Financeiro</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><h2>Financeiro</h2></header>
+      <section class="content">
+        <div class="form-card">
+          <h3>Registrar Entrada / Saída</h3>
+          <form id="financeForm">
+            <label>Data<input name="date" type="date" required></label>
+            <label>Tipo<select name="type"><option value="in">Entrada</option><option value="out">Saída</option></select></label>
+            <label>Descrição<input name="desc"></label>
+            <label>Valor (R$)<input name="value" type="number" step="0.01" required></label>
+            <div class="form-actions"><button type="submit">Salvar</button></div>
+          </form>
+        </div>
+
+        <div class="table-card">
+          <h3>Lançamentos</h3>
+          <table id="financeTable"><thead><tr><th>Data</th><th>Tipo</th><th>Descrição</th><th>Valor</th></tr></thead><tbody></tbody></table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/financeiro.js"></script>
+</body>
+</html>
