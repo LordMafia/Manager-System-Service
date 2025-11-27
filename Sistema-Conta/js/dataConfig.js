@@ -1,7 +1,7 @@
 const dataSelectItens = {
-    "Unhas": ["Completo", "n2", "n3", "n4", "n5"],
-    "Cabelos": ["c1", "c2", "c3", "c4", "c5"],
-    "Maquiagem": ["m1", "m2", "m3", "m4", "m5"],
+    "Unhas": ["Mão", "Pé", "Completo"],
+    "Sobrancelha": ["Rena", "Correção", "Detalhe", "Normal/Completo"],
+    "Depilação": ["Parte superior", "Parte inferior", "Intimo", "Completo"],
 };
 
 
@@ -28,6 +28,27 @@ function populateProductSelect() {
         select.appendChild(optgroup);
     }
 }
+// populateProductSelect();
 
 
-populateProductSelect();
+function populateServiceSelect() {
+
+    const select = document.getElementsByName('typeService')[0];
+    
+    for (const category in dataSelectItens) {
+        const optgroup = document.createElement('optgroup');
+        optgroup.label = category;        
+
+        dataSelectItens[category].forEach(item => {
+            const option = document.createElement('option');
+            option.value = item;
+            option.text = item;
+            
+            optgroup.appendChild(option);
+        });
+
+        select.appendChild(optgroup);
+    }
+}
+
+populateServiceSelect();
