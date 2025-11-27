@@ -1,16 +1,32 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Produtos - Marca de Roupas</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/dashboard.css" />
+
+  <!-- CSS do tema -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/themes/light.css" />
+
+  <!-- Biblioteca Shoelace -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/shoelace.js"></script>
+
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/dialog/dialog.js"></script>
+
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/button/button.js"></script>
 </head>
+
 <body>
   <div class="app">
     <aside class="sidebar">
-      <div class="brand"><h1>SINERGIA</h1></div>
+      <div class="brand">
+        <h1>SINERGIA</h1>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Dashboard</a></li>
@@ -24,7 +40,14 @@
     <main class="main">
       <header class="topbar">
         <h2>Produtos</h2>
-        <div class="controls"><button id="newProductBtn">Adicionar Produto</button></div>
+        <div class="controls">
+          <sl-dialog label="Dialog" class="dialog-width" style="--width: 50vw;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <sl-button slot="footer" variant="primary">Close</sl-button>
+          </sl-dialog>
+
+          <sl-button class="button-style" id="newProductBtn">Adicionar Produto</sl-button>
+        </div>
       </header>
 
       <section class="content">
@@ -51,7 +74,15 @@
         <div class="table-card">
           <h3>Lista de Produtos</h3>
           <table id="productsTable">
-            <thead><tr><th>Nome</th><th>Preço</th><th>Estoque</th><th>Custo</th><th>Ações</th></tr></thead>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+                <th>Custo</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
             <tbody></tbody>
           </table>
         </div>
@@ -61,5 +92,15 @@
 
   <script src="js/storage.js"></script>
   <script src="js/produtos.js"></script>
+
+  <script>
+    const dialog = document.querySelector('.dialog-width');
+    const openButton = dialog.nextElementSibling;
+    const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+
+    openButton.addEventListener('click', () => dialog.show());
+    closeButton.addEventListener('click', () => dialog.hide());
+  </script>
 </body>
+
 </html>

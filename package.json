@@ -1,0 +1,24 @@
+{
+  "name": "manager-system-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LordMafia/Manager-System-Service.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LordMafia/Manager-System-Service/issues"
+  },
+  "homepage": "https://github.com/LordMafia/Manager-System-Service#readme",
+  "description": "",
+  "dependencies": {
+    "@shoelace-style/shoelace": "^2.20.1"
+  }
+}
