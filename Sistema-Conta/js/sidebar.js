@@ -1,7 +1,7 @@
 import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/icon/icon.js';
 
 const imgLogoPath = 'assets/logo.jpg';
-const nameUser = 'USUÁRIO SILVIA';
+const nameUser = 'USUÁRIO SILVIA DESIGN';
 
 const sidebarConfiguration = `
       <div class="brand">
@@ -25,6 +25,14 @@ const sidebarConfiguration = `
         <li style="display:flex;flex-direction:row;align-items:center;gap:8px;">
           <sl-icon name="cash-stack" class="icon"></sl-icon>
           <a href="caixa.html">Caixa</a>
+        </li>
+        <li style="display:flex;flex-direction:row;align-items:center;gap:8px;">
+          <sl-icon name="cash-stack" class="icon"></sl-icon>
+          <a href="caixa.html">Caixa</a>
+        </li>
+        <li style="display:flex;flex-direction:row;align-items:center;gap:8px;">
+          <sl-icon name="cash-stack" class="icon"></sl-icon>
+          <a href="carteira.html">Minha Carteira</a>
         </li>
         </ul>
       </nav>
