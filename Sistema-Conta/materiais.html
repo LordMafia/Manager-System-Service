@@ -1,20 +1,21 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Materiais - Silvia Design</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/dashboard.css" />
+
+  <!-- Biblioteca de estilização e componente -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/themes/light.css" />
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace.js"></script>
-
-    <script type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/dialog/dialog.js"></script>
-
-  <script type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/button/button.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/dialog/dialog.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/button/button.js"></script>
 
 </head>
+
 <body>
   <div class="app">
     <aside class="sidebar"></aside>
@@ -54,7 +55,15 @@
         <div class="table-card">
           <h3>Lista de Materiais</h3>
           <table id="productsTable">
-            <thead><tr><th>Nome</th><th>Preço</th><th>Estoque</th><th>Custo</th><th>Ações</th></tr></thead>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+                <th>Custo</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
             <tbody></tbody>
           </table>
         </div>
@@ -67,4 +76,5 @@
   <script type="module" src="js/sidebar.js"></script>
 
 </body>
+
 </html>

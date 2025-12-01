@@ -1,5 +1,6 @@
 import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/icon/icon.js';
-
+import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/tree/tree.js';
+import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/tree-item/tree-item.js';
 const imgLogoPath = 'assets/logo.jpg';
 const nameUser = 'USUÁRIO SILVIA DESIGN';
 
@@ -22,22 +23,28 @@ const sidebarConfiguration = `
           <sl-icon name="shop" class="icon"></sl-icon>
         <a href="jobs.html">Trabalho Feito</a>
         </li>
-        <li style="display:flex;flex-direction:row;align-items:center;gap:8px;">
-          <sl-icon name="cash-stack" class="icon"></sl-icon>
-          <a href="caixa.html">Caixa</a>
-        </li>
-        <li style="display:flex;flex-direction:row;align-items:center;gap:8px;">
-          <sl-icon name="cash-stack" class="icon"></sl-icon>
-          <a href="caixa.html">Caixa</a>
-        </li>
-        <li style="display:flex;flex-direction:row;align-items:center;gap:8px;">
-          <sl-icon name="cash-stack" class="icon"></sl-icon>
-          <a href="carteira.html">Minha Carteira</a>
-        </li>
          <li style="display:flex;flex-direction:row;align-items:center;gap:8px;">
           <sl-icon name="clipboard-data" class="icon"></sl-icon>
           <a href="relatorio.html">Relatório</a>
         </li>
+
+        <li style="display:flex;flex-direction:row;align-items:center;gap:8px;">
+          <sl-tree>
+            <sl-tree-item>
+              <sl-icon name="cash-stack" class="icon"></sl-icon>
+              <a>Financeiro</a>
+              <sl-tree-item>
+                <sl-icon name="cash-coin" class="icon"></sl-icon>
+                <a href="caixa.html">Caixa</a>
+              </sl-tree-item>
+              <sl-tree-item>
+                <sl-icon name="wallet2" class="icon"></sl-icon>
+                <a href="carteira.html">Minha Carteira</a>
+              </sl-tree-item>
+            </sl-tree-item>
+          </sl-tree>
+        </li>
+
         </ul>
       </nav>
       <footer class="sidebar-foot">v1.0 — Sine Inc.</footer>

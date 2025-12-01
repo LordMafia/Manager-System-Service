@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,8 +8,12 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/dashboard.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Biblioteca de estilização e componente -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/themes/light.css" />
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace.js"></script>
 </head>
+
 <body>
   <div class="app">
     <aside class="sidebar">
@@ -26,10 +31,14 @@
 
       <section class="content">
         <div class="kpis">
-          <div class="card">Faturamento (Mês)<div id="kpiRevenue">R$ 0,00</div></div>
-          <div class="card">Lucro (Mês)<div id="kpiProfit">R$ 0,00</div></div>
-          <div class="card">Ticket Médio<div id="kpiTicket">R$ 0,00</div></div>
-          <div class="card">Margem Média<div id="kpiMargin">0%</div></div>
+          <div class="card">Faturamento (Mês)<div id="kpiRevenue">R$ 0,00</div>
+          </div>
+          <div class="card">Lucro (Mês)<div id="kpiProfit">R$ 0,00</div>
+          </div>
+          <div class="card">Ticket Médio<div id="kpiTicket">R$ 0,00</div>
+          </div>
+          <div class="card">Margem Média<div id="kpiMargin">0%</div>
+          </div>
         </div>
 
         <div class="charts">
@@ -46,7 +55,15 @@
         <div class="table-card">
           <h3>Vendas recentes</h3>
           <table id="recentSales">
-            <thead><tr><th>Data</th><th>Produto</th><th>Qtd</th><th>Valor</th><th>Lucro</th></tr></thead>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Produto</th>
+                <th>Qtd</th>
+                <th>Valor</th>
+                <th>Lucro</th>
+              </tr>
+            </thead>
             <tbody></tbody>
           </table>
         </div>
@@ -60,4 +77,5 @@
   <script src="js/charts.js"></script>
   <script type="module" src="js/sidebar.js"></script>
 </body>
+
 </html>

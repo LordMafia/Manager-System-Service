@@ -7,6 +7,10 @@
   <title>Vendas - Marca de Roupas</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/dashboard.css" />
+
+  <!-- Biblioteca de estilização e componente -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace.js"></script>
 </head>
 
 <body>
@@ -17,7 +21,7 @@
       </div>
       <nav>
         <ul>]
-          
+
           <li><a href="index.html">Dashboard</a></li>
           <li><a href="produtos.html">Produtos</a></li>
           <li><a href="vendas.html">Vendas</a></li>
@@ -35,7 +39,7 @@
         <div class="form-card">
           <form id="saleForm">
             <label>Data<input name="date" type="date" required></label>
-            <label>Produto<select name="productId" required ></select></label>
+            <label>Produto<select name="productId" required></select></label>
             <label>Quantidade<input name="quantity" type="number" min="1" value="1"></label>
             <label>Canal<select name="channel">
                 <option>Instagram</option>
