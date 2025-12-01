@@ -34,6 +34,10 @@ const sidebarConfiguration = `
           <sl-icon name="cash-stack" class="icon"></sl-icon>
           <a href="carteira.html">Minha Carteira</a>
         </li>
+         <li style="display:flex;flex-direction:row;align-items:center;gap:8px;">
+          <sl-icon name="clipboard-data" class="icon"></sl-icon>
+          <a href="relatorio.html">Relatório</a>
+        </li>
         </ul>
       </nav>
       <footer class="sidebar-foot">v1.0 — Sine Inc.</footer>
