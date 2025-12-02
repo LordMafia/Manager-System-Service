@@ -11,6 +11,8 @@
   <!-- Biblioteca de estilização e componente -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/themes/light.css" />
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace.js"></script>
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/icon/icon.js"></script>
 
 </head>
 
@@ -46,11 +48,15 @@
 
           </div>
           <div class="form-actions">
-            <sl-button slot="footer" variant="primary">Close</sl-button>
+            <button slot="footer" variant="primary">Close</button>
             <button type="submit">Registrar</button>
           </div>
         </sl-dialog>
-        <sl-button>Cadastrar Serviço</sl-button>
+        
+        <button id="newJob" style="display: flex; align-items: center; gap: 10px;">
+          <sl-icon name="plus-circle" class="icon"></sl-icon>
+          Adicionar novo Trabalho
+        </button>
 
 
         <div class="table-card">
@@ -82,7 +88,7 @@
     const dialog = document.querySelector('.dialog-scrolling');
     const dialogServices = document.querySelector('.dialog-services');
     const openButton = dialog.nextElementSibling;
-    const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+    const closeButton = dialog.querySelector('button[slot="footer"]');
 
     openButton.addEventListener('click', () => dialog.show());
     closeButton.addEventListener('click', () => {
