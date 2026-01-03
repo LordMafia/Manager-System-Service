@@ -1,12 +1,6 @@
 :root {
   --orange: #f97316;
-  --beige: #f5e6d3;
-  --black: #111827;
-  --muted: #6b7280;
-  --card-bg: #fff;
-}
-:root {
-  --orange: #f97316;
+  --orange-shadow: #f97416da;
   --beige: #f5e6d3;
   --black: #111827;
   --muted: #6b7280;
@@ -73,6 +67,15 @@ body {
   flex-direction: column;
 }
 
+.sidebar a.active {
+  font-weight: bold;
+}
+
+.sidebar li.active,
+.sidebar sl-tree-item.active {
+  background: rgba(255, 255, 255, 0.04);  
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -85,7 +88,8 @@ body {
   margin: 0;
 }
 
-.sidebar nav ul, .sidebar-tree {
+.sidebar nav ul,
+.sidebar-tree {
   list-style: none;
   padding: 0;
   margin-top: 20px;
@@ -95,8 +99,6 @@ body {
   align-items: initial;
   gap: 2px;
 }
-
-
 
 .sidebar nav a,
 .sidebar nav .icon,
@@ -108,11 +110,11 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
-.sidebar nav .icon{
+.sidebar nav .icon {
   padding-left: 10px;
 }
 
-li sl-tree{
+li sl-tree {
   /* border: 0.5rem outset red; */
 }
 
@@ -189,9 +191,7 @@ tbody td {
 
 .form-card {
   background: var(--card-bg);
-  padding: 12px;
-  border-radius: 12px;
-  margin-bottom: 12px;
+  padding: 0 12px;
 }
 
 label {
@@ -209,13 +209,13 @@ select {
 
 .form-actions {
   display: flex;
-
+  align-items: center;
   gap: 8px;
-
   margin-top: 8px;
 }
 
-button, sl-button {
+button,
+sl-button {
   background: var(--orange);
   color: white;
   border: none;
@@ -224,9 +224,23 @@ button, sl-button {
   cursor: pointer;
 }
 
+button:hover,
+sl-button:hover {
+  background: var(--orange-shadow);
+  color: rgb(255, 255, 255);
+}
+
 button.secondary {
   background: #ddd;
   color: var(--black);
+}
+
+button[variant="primary"] {
+  background-color: #dc3545;
+}
+
+button[variant="primary"]:hover {
+  background-color: #dc3546ee;
 }
 
 .sidebar-foot {
@@ -253,4 +267,22 @@ button.secondary {
 
 .topbar .controls button {
   margin-left: 8px;
+}
+
+
+/* Configuração para retirar estilização do shoelace */
+sl-tree-item[aria-selected="true"]::part(item),
+sl-tree-item[aria-selected="true"]::part(item):hover {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+sl-tree-item::part(item):focus {
+  outline: none !important;
+}
+
+sl-tree-item::part(item),
+sl-tree-item::part(item)::before {
+  border-left: none !important;
+  box-shadow: none !important;
 }

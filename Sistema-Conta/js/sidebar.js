@@ -48,6 +48,29 @@ const sidebarConfiguration = `
         </ul>
       </nav>
       <footer class="sidebar-foot">v1.0 — Sine Inc.</footer>
-`;
+      `;
 
 document.querySelector('.sidebar').innerHTML = sidebarConfiguration;
+
+document.querySelector('.sidebar').innerHTML = sidebarConfiguration;
+
+// === adiciona classe active conforme a página atual ===
+const currentPage = window.location.pathname.split('/').pop(); // exemplo: "materiais.html"
+
+document.querySelectorAll('.sidebar a[href]').forEach(link => {
+  const linkPage = link.getAttribute('href');
+
+  if (linkPage === currentPage) {
+    link.classList.add('active');
+    
+    const li = link.closest('li');
+    if (li) li.classList.add('active');
+
+    const treeItem = link.closest('sl-tree-item');
+    if (treeItem) {
+      treeItem.classList.add('active');
+      treeItem.expanded = true;
+    }
+  }
+});
+

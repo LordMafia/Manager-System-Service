@@ -4,6 +4,12 @@ const dataSelectItens = {
     "Depilação": ["Parte superior", "Parte inferior", "Intimo", "Completo"],
 };
 
+const dataMaterialSKU = [
+    "Alicate",
+    "Algodão",
+    "Lixa",
+]
+
 
 function populateProductSelect() {
 
@@ -52,3 +58,19 @@ function populateServiceSelect() {
 }
 
 populateServiceSelect();
+
+
+function populateMaterialSelect(){
+    const select = document.getElementsByName('materialId');
+
+    for(const item in dataMaterialSKU){
+        console.log(item);
+        
+        const option = document.createElement('option');
+        option.value = item;
+        option.text = item;
+        select.appendChild(option)
+    }
+}
+
+populateMaterialSelect();
